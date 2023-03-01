@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Force Arm Detection</title>
+</head>
+<table border="1">
+<tr>
+    <td>
+        Image threshold based method
+        <br>
+        pointer mode
+    </td>
+    <td>
+        pointer based method
+        <br>
+        Anatomical coordinate system RAI mode
+    </td>
+</tr>
+<tr>
+    <td>
+        {% for name in input_img %}
+        <img src="{{name}}" alt="" width="800px", height="600px">
+        {% end %}
+    </td>
+    <td>
+        {% for name in dmimg %}
+        <img src="{{name}}" alt="" width="800px", height="600px">
+        {% end %}
+    </td>
+</tr>
+</table>
+
+<hr SIZE=3>
+<table border="1">
+<tr>
+    <td>
+        image thresh based method for same side
+        <br>
+        slot mode
+    </td>
+    <td>
+        OCR based method for same side
+        <br>
+        Image coordinate system IJK mode
+    </td>
+</tr>
+<tr>
+    <td>
+        {% for name in pointer_img %}
+        <img src="{{name}}" alt="" width="800px", height="600px">
+        {% end %}
+    </td>
+    <td>
+        {% for name in slot_img %}
+        <img src="{{name}}" alt="" width="800px", height="600px">
+        {% end %}
+    </td>
+</tr>
+</table>

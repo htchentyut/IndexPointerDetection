@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Upload image and shown</title>
+
+    <style>
+        .dropbtn {
+            background-color: red;
+            color: white;
+            padding: #px;
+            font-size: #px;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: lightgrey;
+            min-width: #px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: #px #px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: white;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {background-color: grey;}
+    </style>
+</head>
+<body>
+<!--    {#-->
+<!--        action 与服务器交互-->
+<!--        method 提交方式-->
+<!--        enctype 文件传输必备参数-->
+<!--        name 后台获取HTML参数-->
+<!--    #}-->
+    <form action='upload' method='post' enctype='multipart/form-data'>
+        <br> Select a image jpg file:
+        <br> <input type='file' name='image' >
+        <br> Select a location txt file:
+        <br> <input type="file" name="location" >
+        <br> Coordinate System Selection </br>
+<!--        <div class="dropdown">-->
+<!--            Coordinate System Selection:-->
+<!--            <button class="dropbtn">please select</button>-->
+<!--            <div class="dropdown-content">-->
+        <select>
+            <option value="pointer_based">pointer mode</option>
+            <option value="slot_based">slot mode</option>
+        </select>
+<!--            </div>-->
+<!--        </div>-->
+        <hr SIZE=3>
+        <input type='submit' value="Submit image and location information">
+    </form>
+
+</body>
+<hr SIZE=3>
+<body>
+    {#    #}
+    {% for name in images %}
+    <img src="{{name}}" alt="" width="800px", height="600px">
+    {% end %}
+</body>
+
+</html>
