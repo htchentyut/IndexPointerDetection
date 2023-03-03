@@ -1,3 +1,3 @@
 # IndexPointerDetection
 
-index pointer detection based on dynamometer, lever, balance scale
+detected the index pointer of dynamometer, lever, balance scale
